@@ -2,9 +2,9 @@
 
 	//------------- Database Connection ----------------
 	$servername = "localhost";
-	$username = "root";
-	$password = "m@MdP*k67^sT";
-	$db = "tmf2034_db";
+	$username = "USER_NAME";	// Add your own server settings, replace them
+	$password = "YOUR_PASSWORD";
+	$db = "DATABASE_NAME";
 	global $conn;
 
 	// Create connection
