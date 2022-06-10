@@ -39,8 +39,30 @@
 		if ($conn->query($sql) === TRUE)
 			echo "New record created successfully.";
 		else
-			echo "Error: " . $sql . "<br>" . $conn->error;
+			echo "An error occured:<br>" . $conn->error;
 	}
 
 	
+	//------------- Delete Record ----------------
+	function delete_record($stdid){
+		global $conn;
+		$sql = "DELETE FROM students WHERE stdID = $stdid";
+
+		if ($conn->query($sql) === TRUE)
+			echo "A record deleted successfully.";
+		else
+			echo "An error occured:<br>" . $conn->error;
+	}
+
+
+	//------------- Update Record ----------------
+	function update_record($id, $name, $email, $intake){
+		global $conn;
+		$sql = "UPDATE students SET stdID = $id, stdName = '$name', stdEmail = '$email', intakeYear = $intake WHERE stdID = $id";
+
+		if ($conn->query($sql) === TRUE)
+			echo "A record updated successfully.";
+		else
+			echo "An error occured:<br>" . $conn->error;
+	}
 ?>
